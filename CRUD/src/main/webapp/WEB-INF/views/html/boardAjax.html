@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="common/top.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript" src="common/menu.js"></script>
+	<div class="container">
+		<h1>게시판</h1>
+		<table class="table table-striped">
+			<colgroup>
+				<col width="10%">
+				<col width="50%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th style="font-weight: bold;">번호</th>
+					<th style="font-weight: bold;">제목</th>
+					<th style="font-weight: bold;">작성자</th>
+					<th style="font-weight: bold;">날짜</th>
+				</tr>
+			</thead>
+			
+			<tbody id="boardList">
+			</tbody>
+		</table>
+		<a href='javascript:;' class="btn btn-success" id="btn_writeForm">글쓰기</a>
+		
+		<!-- 글쓰기 폼 -->
+		
+		<div id="writeForm" style="display: none; margin-top: 20px;">
+			<form action="" method="post" name="f">
+				<div class="form-group">
+					<label>제목</label>
+					<input type="text" class="form-control" id="board_title" name="board_title" placeholder="제목을 입력하세요.">
+				</div>
+				
+				<div class="form-group">
+		    		<label>작성자</label>
+		   			<input type="text" class="form-control" id="board_id" name="board_id" placeholder="작성자를 입력하세요.">
+		 		 </div>
+		  
+		 		 <div class="form-group">
+		   			<label>내용</label>
+		   			<textarea class="form-control" rows="10" id="board_content" name="board_content" maxlength="2048" placeholder="내용을 입력하세요."></textarea>
+		  		</div>
+		  		
+		  		<button type="button" class="btn btn-info" id="btn_write">작성</button>
+			</form>
+		</div>
+		
+		<!-- 글 상세 보기 폼 -->
+		<div id="viewForm" style="display: none; margin-top: 20px;">
+			<div id="boardView">
+				<table>
+					<tr>
+						<th style="width: 100px">번호</th>
+					</tr>
+					<tr>
+						<td id="viewNum"></td>
+					</tr>
+					<tr>
+						<th style="width: 100px">제목</th>
+					</tr>
+					<tr>
+						<td id="viewTitle"></td>
+					</tr>
+					<tr>
+						<th style="width: 100px">작성자</th>
+					</tr>
+					<tr>
+						<td id="viewID"></td>
+					</tr>
+					<tr>
+						<th style="width: 100px">내용</th>
+					</tr>
+					<tr>
+						<td id="viewContent"></td>
+					</tr>
+					
+				</table>
+			</div>
+			<br>
+			<button type="button" id="btn_close" class="btn btn-primary">닫기</button>
+		</div>
+	</div>
+	
+</body>
+</html>
