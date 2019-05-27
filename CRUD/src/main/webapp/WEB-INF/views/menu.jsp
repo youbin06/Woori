@@ -15,6 +15,7 @@
     	</ul>
 	</li>
 	<li role="presentation" class="calc"><a href="calculator.do">계산기</a>
+	<li role='presentation' class='html'><a href='html.html'>Html</a></li>
 </ul>
 
 <script>
@@ -28,5 +29,8 @@
 
 	} else if (url.indexOf("calc") > -1) {
 		$(".calc").addClass("active");
+		
+	} else if (url.indexOf("html") > -1) {
+		$(".html").addClass("active");
 	}
 </script>

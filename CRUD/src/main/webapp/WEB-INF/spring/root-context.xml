@@ -23,7 +23,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="typeAliasesPackage" 	value="com.limecompany.woo" />
-		<property name="mapperLocations"		value="classpath:boardMapper.xml" />
+		<property name="mapperLocations"		value="classpath*:boardMapper.xml" />
 	</bean>	
 	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
